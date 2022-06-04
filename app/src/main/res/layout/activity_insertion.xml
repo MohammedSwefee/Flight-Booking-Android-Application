@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/ins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:onClick="ins"
+        android:text="Insert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/pln"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Plain"
+        android:inputType="text"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/sts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/srvc"
+        tools:fontFamily="serif" />
+
+    <EditText
+        android:id="@+id/flt_num"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="110dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Flight Number"
+        android:inputType="text"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:fontFamily="serif"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/lnd_date"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Landing Date"
+        android:inputType="text|datetime"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/_date"
+        tools:fontFamily="serif" />
+
+    <EditText
+        android:id="@+id/_date"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Landing Date"
+        android:inputType="text|datetime"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cost"
+        tools:fontFamily="serif"
+        tools:ignore="DuplicateIds" />
+
+    <EditText
+        android:id="@+id/sts"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Seats"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cost" />
+
+    <EditText
+        android:id="@+id/srvc"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_marginBottom="86dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="86dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Service"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/sts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dis_in" />
+
+    <EditText
+        android:id="@+id/cost"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="149dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginTop="148dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Cost"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/ins"
+        app:layout_constraintEnd_toEndOf="@+id/_date"
+        app:layout_constraintTop_toTopOf="@+id/flt_num" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="del"
+        android:text="Delete"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/dis_in"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/flt_num"
+        app:layout_constraintEnd_toEndOf="@+id/flt_num"
+        app:layout_constraintStart_toStartOf="@+id/comp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/org_in"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/srvc"
+        app:layout_constraintEnd_toEndOf="@+id/srvc"
+        app:layout_constraintStart_toStartOf="@+id/srvc"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/comp"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="79dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cost"
+        app:layout_constraintEnd_toEndOf="@+id/flt_num"
+        app:layout_constraintStart_toStartOf="@+id/cost"
+        app:layout_constraintTop_toBottomOf="@+id/dis_in" />
+
+</android.support.constraint.ConstraintLayout>
